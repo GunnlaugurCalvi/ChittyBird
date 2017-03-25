@@ -59,29 +59,56 @@ body {
 .GameCanvas {
     font-size: 10px;
     position: absolute;
-	top: 0;
-	left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
 .sliding-background {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background: url('http://s30.postimg.org/tycvlfagh/background.png');
-	background-size: auto 100%;
-    animation: slide 5s linear infinite;
+    background-size: auto 100%;
+    -webkit-animation: 100s scroll infinite linear;
+    -moz-animation: 100s scroll infinite linear;
+    -o-animation: 100s scroll infinite linear;
+    -ms-animation: 100s scroll infinite linear;
+    animation: 100s scroll infinite linear;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s;
-    overflow: hidden;	
+    overflow: hidden;
 }
 
-@keyframes slide {
-    0% {
-        background-position: 100% 0
-    }
+@-webkit-keyframes scroll {
     100% {
-        background-position: 0% 0
+        background-position: -5000px 0px;
+    }
+}
+
+@-moz-keyframes scroll {
+    100% {
+        background-position: -5000px 0px;
+    }
+}
+
+@-o-keyframes scroll {
+    100% {
+        background-position: -5000px 0px;
+    }
+}
+
+@-ms-keyframes scroll {
+    100% {
+        background-position: -5000px 0px;
+    }
+}
+
+@keyframes scroll {
+    100% {
+        background-position: -5000px 0px;
     }
 }
