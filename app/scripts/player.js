@@ -26,7 +26,7 @@ window.Player = (function() {
 	};
 
 	Player.prototype.onFrame = function(delta) {
-		if (Controls.keys.up) {
+		if (Controls.keys.jump) {
 			this.pos.y -= delta * SPEED;
 		}
 		this.pos.y += (delta * SPEED)/4;
@@ -38,10 +38,7 @@ window.Player = (function() {
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {
-		if (this.pos.x < 0 ||
-			this.pos.x + WIDTH > this.game.WORLD_WIDTH ||
-			this.pos.y < 0 ||
-			this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
+		if (this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
 			return this.game.gameover();
 		}
 	};

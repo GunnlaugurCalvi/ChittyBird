@@ -16,7 +16,7 @@
     width: 40em;
     margin-left: -20em;
     box-sizing: border-box;
-    background: purple;
+    background: lightcoral;
     text-align: center;
     -webkit-transform: translate(0, -40em);
     -webkit-transition: -webkit-transform 0.5s;
@@ -94,7 +94,7 @@ body {
     bottom: 65%;
     background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
     background-size: 100% 100%;
-    transform: translateZ(0) ;
+    transform: translateZ(0);
 }
 
 .Pipesetfloor1 {

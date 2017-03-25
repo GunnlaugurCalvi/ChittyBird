@@ -27,9 +27,14 @@ window.Game = (function() {
 		}
 
 		// Calculate how long since last frame in seconds.
-		var now = +new Date() / 1000,
+		var now =+ new Date() / 1000,
 				delta = now - this.lastFrame;
 		this.lastFrame = now;
+
+		// Calculate screen size
+		Game.prototype.WORLD_WIDTH = $('.GameCanvas').width() / 10;
+		Game.prototype.WORLD_HEIGHT = $('.GameCanvas').height() / 10;
+
 
 		// Update game entities.
 		this.player.onFrame(delta);
@@ -78,8 +83,6 @@ window.Game = (function() {
 	/**
 	 * Some shared constants.
 	 */
-	Game.prototype.WORLD_WIDTH = 102.4;
-	Game.prototype.WORLD_HEIGHT = 90;
 
 	return Game;
 })();
