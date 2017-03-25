@@ -26,10 +26,21 @@
         <div class="GameCanvas">
             <div class="sliding-background"></div>
             <div class="Player"></div>
-            <div class="Pipeset1"></div>
-            <div class="Pipeset2"></div>
-            <div class="Pipeset3"></div>
 
+            <div class="pipeset1">
+                <div class="Pipesetroof1"></div>
+                <div class="Pipesetfloor1"></div>
+            </div>
+            <div class="pipeset2">
+                <div class="Pipesetroof2"></div>
+                <div class="Pipesetfloor2"></div>
+            </div>
+            <div class="pipeset3">
+                <div class="Pipesetroof3"></div>
+                <div class="Pipesetfloor3"></div>
+            </div>
+
+            <p class="score">0</p>
             <div class="Scoreboard">
                 <button class="Scoreboard-restart">
                     <span class="Scoreboard-restartText">Restart</span>
@@ -45,6 +56,7 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/pipes.js"></script>
         <script src="scripts/controls.js"></script>
         <script src="scripts/game.js"></script>
         <script src="scripts/player.js"></script>
