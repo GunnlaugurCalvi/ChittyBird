@@ -16,19 +16,19 @@ window.Controls = (function() {
         $(window)
             .on('tap', this._onMouseDown.bind(this))
             .on('mousedown', this._onMouseDown.bind(this))
-            .on('keydown', this._onKeyDown.bind(this))
+            .on('keydown', this._onKeyDown.bind(this));
     };
 
     Controls.prototype._onKeyDown = function(e) {
         // Remember that this button is down.
         if (e.keyCode === 32) {
-            this.keys['jump'] = true;
+            this.keys.jump = true;
             return false;
         }
     };
 
-    Controls.prototype._onMouseDown = function(e) {
-        this.keys['jump'] = true;
+    Controls.prototype._onMouseDown = function() {
+        this.keys.jump = true;
         return false;
     };
 
