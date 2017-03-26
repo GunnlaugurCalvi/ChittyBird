@@ -14,10 +14,9 @@ window.Controls = (function() {
         this._didJump = false;
         this.keys = {};
         $(window)
+            .on('tap', this._onMouseDown.bind(this))
             .on('mousedown', this._onMouseDown.bind(this))
-            .on('mouseup', this._onMouseUp.bind(this))
             .on('keydown', this._onKeyDown.bind(this))
-            .on('keyup', this._onKeyUp.bind(this));
     };
 
     Controls.prototype._onKeyDown = function(e) {
@@ -28,20 +27,8 @@ window.Controls = (function() {
         }
     };
 
-    Controls.prototype._onKeyUp = function(e) {
-        if (e.keyCode === 32) {
-            this.keys['jump'] = false;
-            return false;
-        }
-    };
-
     Controls.prototype._onMouseDown = function(e) {
         this.keys['jump'] = true;
-        return false;
-    };
-
-    Controls.prototype._onMouseUp = function(e) {
-        this.keys['jump'] = false;
         return false;
     };
 

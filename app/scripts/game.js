@@ -10,6 +10,7 @@ window.Game = (function() {
 	var Game = function(el) {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
+		this.pipes = new window.Pipes(this.el.find('.Pipes'), this)
 		this.isPlaying = false;
 
 		// Cache a bound onFrame since we need it each frame.
@@ -37,6 +38,7 @@ window.Game = (function() {
 
 
 		// Update game entities.
+		this.pipes.onFrame(delta);
 		this.player.onFrame(delta);
 
 		// Request next frame.

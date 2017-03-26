@@ -78,7 +78,8 @@ body {
     height: 100%;
     overflow: hidden;
 }
-.pipeset1 {
+
+.pipe {
     position: absolute;
     visibility: visible;
     width: 8.5em;
@@ -86,84 +87,6 @@ body {
     bottom: 0%;
     transform: translateZ(0);
 }
-
-.Pipesetroof1 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 65%;
-    background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
-    background-size: 100% 100%;
-    transform: translateZ(0);
-}
-
-.Pipesetfloor1 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 65%;
-    background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
-    background-size: 100% 100%;
-}
-
-.pipeset2{
-    position: absolute;
-    visibility: visible;
-    width: 8.5em;
-    height: 100%;
-    bottom: 10%;
-    transform: translateZ(0);
-}
-
-.Pipesetroof2 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 65%;
-    background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
-    background-size: 100% 100%;
-    transform: translateZ(0) ;
-
-}
-
-.Pipesetfloor2{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 65%;
-    background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
-    background-size: 100% 100%;
-}
-
-.pipeset3 {
-    position: absolute;
-    visibility: visible;
-    width: 8.5em;
-    height: 100%;
-    bottom: -5%;
-    transform: translateZ(0);
-}
-
-.Pipesetroof3 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 65%;
-    background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
-    background-size: 100% 100%;
-    transform: translateZ(0) ;
-
-}
-
-.Pipesetfloor3 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 65%;
-    background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
-    background-size: 100% 100%;
-}
-
 
 .sliding-background {
     position: fixed;
