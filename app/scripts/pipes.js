@@ -10,28 +10,27 @@ window.Pipes = (function () {
     };
     Pipes.prototype.spawnPipe = function() {
         pipeid++;
-        var pipetopHeight = this.el.height() - 200;
-        var pipebottomHeight = $('.GameCanvas').height();
-        var pipe = '<div class="pipe" pipe-id="' + pipeid + '"><div style="height: ' + pipetopHeight + 'px" class="pipetop"></div><div style="height:' + pipebottomHeight + 'px" class="pipebottom"></div></div>';
+        var pipetopHeight = 0-200;
+        var pipebottomHeight = this.el.find('.GameCanvas').height();
+        var pipe = '<div class="pipe" pipe-id="' + pipeid + '" style="right: ' + 0 + 'px "><div style="height: ' + pipetopHeight + 'px " class="pipetop"></div><div style="height:' + pipebottomHeight + 'px" class="pipebottom"></div></div>';
         this.el.append(pipe);
-    }
-
+    };
+    Pipes.prototype.reset = function() {
+        setInterval( (() => this.spawnPipe()), 1000 );
+    };
 
 
     Pipes.prototype.deletePipe = function() {
-        $('.window .pipe').first().remove();
-    }
+        this.el.find('.pipe').first().remove();
+    };
 
 
     Pipes.prototype.onFrame = function (delta) {
 
         // // Update UI
-        this.spawnPipe();
-        this.el.each(function () {
-            this.animate({
-                right: '+=160px'
-            }, 1300, 'linear');
-        });
+        // this.el.each(function () {
+        this.el.find('.pipe').css('right', '+=10em');
+        // });
 
         // this.el.css('transform', 'translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
     };
