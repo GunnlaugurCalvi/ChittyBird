@@ -12,6 +12,7 @@ window.Player = (function() {
 	var INITIAL_POSITION_Y = 25;
 	var GRAVITY = 1.05;
 
+
 	var Player = function(el, game) {
 		this.el = el;
 		this.game = game;
@@ -21,6 +22,14 @@ window.Player = (function() {
 		INITIAL_POSITION_Y = this.el.height()/4;
 	};
 
+	Player.prototype.jump = function() {
+		this.el.stop().animate({
+			top: 0
+		}, {
+			duration: Infinity
+		});
+	};
+
 	/**
 	 * Resets the state of the player for a new game.
 	 */
@@ -28,12 +37,17 @@ window.Player = (function() {
 		this.pos.x = INITIAL_POSITION_X;
 		this.pos.y = INITIAL_POSITION_Y;
 		this.currSpeed = SPEED;
+		this.WIDTH = this.el.find('.Player').width();
 	};
 
 	Player.prototype.onFrame = function(delta) {
 		if (Controls.keys.jump) {
+			this.pos.y -= 5;
+			if(this.game.state === 0) {
+			}
+			this.jump();
 			this.currSpeed = SPEED;
-			this.pos.y -= (delta * SPEED)*40;
+			// this.pos.y -= (delta * SPEED)*40;
 		}
 
 		// Gravity
