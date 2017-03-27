@@ -3,9 +3,16 @@
     top: 0;
     left: 0;
     width: 5em;
-    height: 5em;
+    height: 3.5em;
     background: url('http://s28.postimg.org/k90gybbtl/bird_Sprite.png');
+    background-size: 100%;
     transform: translateZ(0);
+    animation: birdFlap 0.2s steps(3, end) infinite alternate;
+}
+
+@keyframes birdFlap {  
+  0% {background-position: 0 105px;}
+  100% {background-position: 0 0;}
 }
 
 .Scoreboard {
@@ -105,6 +112,7 @@ body {
     top: 65%;
     background-image: url('http://s21.postimg.org/kyr2rnpzr/pipe.png');
     background-size: 100% 100%;
+    transform: translateZ(0);
 }
 
 .sliding-background {
@@ -113,40 +121,12 @@ body {
     width: 100%;
     background: url('http://s30.postimg.org/tycvlfagh/background.png');
     background-size: auto 100%;
-    -webkit-animation: 100s scroll infinite linear;
-    -moz-animation: 100s scroll infinite linear;
-    -o-animation: 100s scroll infinite linear;
-    -ms-animation: 100s scroll infinite linear;
     animation: 100s scroll infinite linear;
     width: 100%;
     height: 100%;
     transition: transform 0.3s;
     overflow: hidden;
     transform: translateZ(0);
-}
-
-@-webkit-keyframes scroll {
-    100% {
-        background-position: -5000px 0px;
-    }
-}
-
-@-moz-keyframes scroll {
-    100% {
-        background-position: -5000px 0px;
-    }
-}
-
-@-o-keyframes scroll {
-    100% {
-        background-position: -5000px 0px;
-    }
-}
-
-@-ms-keyframes scroll {
-    100% {
-        background-position: -5000px 0px;
-    }
 }
 
 @keyframes scroll {
