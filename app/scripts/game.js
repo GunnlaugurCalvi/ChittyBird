@@ -43,6 +43,8 @@ window.Game = (function() {
 
 		// checkPipeCollision
 		if (this.checkPipeCollision()) {
+			var crash = new Audio('./sounds/crash.wav');
+			crash.play();
 			this.gameover();
 		}
 
@@ -103,12 +105,7 @@ window.Game = (function() {
 				}
 			}
 			return true;
-
-		} else {
-			return;
 		}
-
-
 	};
 
 

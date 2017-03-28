@@ -10,7 +10,6 @@ window.Controls = (function() {
      * and touch devices.
      * @constructor
      */
-    var ismute = false;
     var Controls = function() {
         this._didJump = false;
         this.keys = {};
