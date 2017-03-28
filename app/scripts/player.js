@@ -2,7 +2,6 @@ window.Player = (function() {
 	'use strict';
 
 	var Controls = window.Controls;
-
 	// All these constants are in em's, multiply by 10 pixels
 	// for 1024x576px canvas.
 	var SPEED = 30; // * 10 pixels per second
@@ -44,6 +43,8 @@ window.Player = (function() {
 		if (Controls.keys.jump) {
 			this.jump();
 			this.currSpeed = -150;
+			var jump = new Audio('./sounds/jump.wav');
+			jump.play();
 		}
 
 		// Gravity
@@ -65,7 +66,10 @@ window.Player = (function() {
 
 	Player.prototype.checkCollisionWithBounds = function() {
 		if (this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
-			return this.game.gameover();
+            var crash = new Audio('./sounds/crash.wav');
+            crash.play();
+		    return this.game.gameover();
+
 		}
 	};
 
