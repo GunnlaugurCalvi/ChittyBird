@@ -42,24 +42,25 @@ window.Player = (function() {
 
 	Player.prototype.onFrame = function(delta) {
 		if (Controls.keys.jump) {
-			this.pos.y -= 5;
-			if(this.game.state === 0) {
-			}
 			this.jump();
-			this.currSpeed = SPEED;
-			// this.pos.y -= (delta * SPEED)*40;
+			this.currSpeed = -150;
 		}
 
 		// Gravity
-		this.currSpeed = this.currSpeed * GRAVITY;
+		this.currSpeed += 5;
 		this.pos.y += (delta * this.currSpeed)/4;
-
+		var rotate = 0;
 		this.checkCollisionWithBounds();
+		if (this.currSpeed > 0 && this.el.css('transform')) {
+			rotate = 20;
+		} else if (this.currSpeed < 0) {
+			rotate = -20;
+		}
 
 		Controls.keys = {};
 
 		// Update UI
-		this.el.css('transform', 'translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em) ' + 'rotate(' + rotate + 'deg)');
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {

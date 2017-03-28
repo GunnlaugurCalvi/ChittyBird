@@ -103,12 +103,7 @@ window.Game = (function() {
 				}
 			}
 			return true;
-
-		} else {
-			return;
 		}
-
-
 	};
 
 
