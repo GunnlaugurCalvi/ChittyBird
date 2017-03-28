@@ -8,6 +8,7 @@ This game project has the following:
 * A player entity which can be moved around the canvas using the arrow keys.
 * A "Game Over" screen when player is moved outside bounds, where the game can be restarted.
 
+* To mute press 'm' and to unmute press 'u'
 ## Setup
 
 ```
