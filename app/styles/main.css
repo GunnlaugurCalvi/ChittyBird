@@ -10,7 +10,7 @@
     animation: birdFlap 0.2s steps(3, end) infinite alternate;
 }
 
-@keyframes birdFlap {  
+@keyframes birdFlap {
   0% {background-position: 0 105px;}
   100% {background-position: 0 0;}
 }
@@ -68,7 +68,6 @@
 body {
     background: black;
 }
-
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
