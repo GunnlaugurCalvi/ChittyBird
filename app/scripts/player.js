@@ -43,7 +43,7 @@ window.Player = (function() {
 		if (Controls.keys.jump) {
 			this.jump();
 			this.currSpeed = -150;
-			var jump = new Audio('./sounds/jump.wav');
+			var jump = new Audio('./sounds/Bird-Up.mp3');
 			jump.play();
 		}
 
